@@ -1,0 +1,11 @@
+loader.load('monster.glb', gltf=>{
+  const m=gltf.scene;
+  m.scale.set(2,2,2);
+  m.position.set(10,0,-40);
+  scene.add(m);
+  monsters.push(m);
+  const mixer=new THREE.AnimationMixer(m);
+  const walk=gltf.animations.find(c=>/walk/i.test(c.name) || c);
+  mixer.clipAction(walk).play();
+  monsterMixers.push(mixer);
+});
