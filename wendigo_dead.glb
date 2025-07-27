@@ -1,0 +1,7 @@
+loader.load('wendigo_dead.glb', gltf=>{
+  const c=gltf.scene;
+  c.scale.set(2,2,2);
+  c.rotation.x=-Math.PI/2;
+  c.position.set(-5,0,-20);
+  scene.add(c);
+});
