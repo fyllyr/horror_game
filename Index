@@ -10,7 +10,13 @@
 <body>
   <!-- Tutorial / Menu / Shop / HUD / Overlays -->
   <!-- [All HTML elements including tutorial, menus, overlays] -->
-
+<div id="mainMenu">
+  <div style="margin-bottom:20px;font-size:24px;">Welcome to the Abandoned Hospital</div>
+  <div>
+    <button onclick="startGame()" style="padding:10px 20px;font-size:20px;">Start Game</button>
+    <button onclick="toggleMainShop()" style="padding:10px 20px;font-size:20px;margin-left:10px;">Shop</button>
+  </div>
+</div>
   <script type="module">
     import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js';
     import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/examples/jsm/loaders/GLTFLoader.js';
@@ -23,6 +29,11 @@
     // • Good ending / bad ending logic, WiFi meter, puddle zones
 
     // Use the same full script code I provided in the prototype snippet above.
+function startGame() {
+  document.getElementById('mainMenu').style.display = 'none';
+  controls.lock(); // Lock pointer and begin
+}
+
   </script>
 </body>
 </html>
