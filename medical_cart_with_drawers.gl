@@ -1,0 +1,7 @@
+loader.load('medical_cart_with_drawers.glb', gltf=>{
+  const drawer=gltf.scene;
+  drawer.scale.set(2,2,2);
+  drawer.position.set(2,0,-15);
+  scene.add(drawer);
+  interactive.push(drawer);
+});
