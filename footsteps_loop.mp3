@@ -1,0 +1,5 @@
+audioLoader.load('footsteps_loop.mp3', buffer => {
+  footstepSound.setBuffer(buffer);
+  footstepSound.setLoop(true);
+  footstepSound.setVolume(0.6);
+});
