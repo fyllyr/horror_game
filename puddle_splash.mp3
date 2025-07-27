@@ -1,0 +1,6 @@
+audioLoader.load('puddle_splash.mp3', buffer => {
+  const s = new THREE.Audio(camera.children[0]);
+  s.setBuffer(buffer);
+  s.setVolume(0.3);
+  s.play();
+});
