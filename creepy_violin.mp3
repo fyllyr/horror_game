@@ -1,0 +1,7 @@
+audioLoader.load('creepy_violin.mp3', buffer => {
+  const amb = new THREE.Audio(listener);
+  amb.setBuffer(buffer);
+  amb.setLoop(true);
+  amb.setVolume(0.4);
+  amb.play();
+});
