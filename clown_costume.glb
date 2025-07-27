@@ -1,0 +1,12 @@
+const shopItems = {
+  costume1: { price: 3, file: 'clown_costume.glb' }
+};
+
+function equipCostume(file){
+  loader.load(file, gltf => {
+    const costume = gltf.scene;
+    costume.scale.set(1,1,1);
+    camera.add(costume);
+    costume.position.set(0,1.6,0); // adjust as needed
+  });
+}
